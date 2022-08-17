@@ -7,13 +7,11 @@ public class Gallery {
     private String name;
     private double till;
     private ArrayList<Artwork> artworks;
-//    private Customer customer;
 
     public Gallery(String name, double till){
         this.name = name;
         this.till = till;
         this.artworks = new ArrayList<>();
-//        this.customer = customer;
     }
 
     public void addArtwork(Artwork artwork){
