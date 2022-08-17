@@ -25,6 +25,8 @@ public class Gallery {
             if(customer.getWallet() > artwork.getPrice()){
                 till += customer.getWallet();
                 customer.subtractWallet(artwork.getPrice());
+                customer.addPurchasedArtwork(artwork);
+                artworks.remove(artwork);
             }
         }
     }
