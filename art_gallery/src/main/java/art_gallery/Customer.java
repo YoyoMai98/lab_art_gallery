@@ -9,4 +9,8 @@ public class Customer {
         this.name = name;
         this.wallet = wallet;
     }
+    
+    public double getWallet(){
+        return wallet;
+    }
 }

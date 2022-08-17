@@ -14,4 +14,8 @@ public class Artwork {
         this.nft = nft;
     }
 
+    public double getPrice(){
+        return price;
+    }
+
 }
