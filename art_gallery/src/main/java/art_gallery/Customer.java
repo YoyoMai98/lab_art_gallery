@@ -32,4 +32,8 @@ public class Customer {
     public void addPurchasedArtwork(Artwork artwork){
         purchasedArtworks.add(artwork);
     }
+
+    public ArrayList getPurchasedArtwork(){
+        return purchasedArtworks;
+    }
 }
