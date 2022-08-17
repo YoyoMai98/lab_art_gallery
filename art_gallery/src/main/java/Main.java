@@ -16,7 +16,7 @@ public class Main {
         Customer customer = new Customer("John", 3000);
         System.out.println("Wallet: " + customer.getWallet());
 
-        Gallery gallery = new Gallery("YK Gallery", 1300, customer);
+        Gallery gallery = new Gallery("YK Gallery", 1300);
         gallery.addArtwork(artwork);
 
         ArrayList<Artwork> artworksList = gallery.getArtworks();
@@ -25,7 +25,8 @@ public class Main {
             System.out.println(artwork1.getTitle());
         }
 
-        gallery.sellArtwork();
+        gallery.sellArtwork(artwork);
+        customer.subtractWallet(artwork.getPrice());
         System.out.println("Wallet after purchasing: " + customer.getWallet());
     }
 }
