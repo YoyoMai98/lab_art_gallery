@@ -19,14 +19,6 @@ public class Gallery {
     }
 
     public void sellArtwork(Artwork artwork){
-//        for(Artwork artwork : artworks){
-//            if(customer.getWallet() > artwork.getPrice()){
-//                till += customer.getWallet();
-//                customer.subtractWallet(artwork.getPrice());
-//                customer.addPurchasedArtwork(artwork);
-////                this.artworks.remove(artwork);
-//            }
-//        }
         till += artwork.getPrice();
         this.artworks.remove(artwork);
     }
