@@ -16,6 +16,10 @@ public class Gallery {
         this.customer = customer;
     }
 
+    public void addArtwork(Artwork artwork){
+        this.artworks.add(artwork);
+    }
+
     public void sellArtwork(){
         for(Artwork artwork : artworks){
             if(customer.getWallet() > artwork.getPrice()){
@@ -23,6 +27,10 @@ public class Gallery {
                 customer.subtractWallet(artwork.getPrice());
             }
         }
+    }
+
+    public double getTill(){
+        return till;
     }
 
 }
