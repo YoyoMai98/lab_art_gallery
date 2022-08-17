@@ -14,7 +14,10 @@ public class Main {
         Customer customer = new Customer("John", 3000);
         System.out.println("Wallet: " + customer.getWallet());
 
-        Gallery gallery = new Gallery("MK Gallery", 1300, customer);
-        
+        Gallery gallery = new Gallery("YK Gallery", 1300, customer);
+        gallery.addArtwork(artwork);
+
+        gallery.sellArtwork();
+        System.out.println("Wallet after purchasing: " + customer.getWallet());
     }
 }
