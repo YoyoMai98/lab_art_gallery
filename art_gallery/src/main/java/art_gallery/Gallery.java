@@ -26,7 +26,7 @@ public class Gallery {
                 till += customer.getWallet();
                 customer.subtractWallet(artwork.getPrice());
                 customer.addPurchasedArtwork(artwork);
-//                artworks.remove(artwork);
+//                this.artworks.remove(artwork);
             }
         }
     }
