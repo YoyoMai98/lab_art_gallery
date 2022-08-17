@@ -33,9 +33,9 @@ public class Gallery {
         this.artworks.remove(artwork);
     }
 
-    public ArrayList getArtworks(){
-        return artworks;
-    }
+//    public ArrayList getArtworks(){
+//        return artworks;
+//    }
 
     public double getTill(){
         return till;
