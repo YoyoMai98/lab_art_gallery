@@ -19,13 +19,15 @@ public class Main {
         Gallery gallery = new Gallery("YK Gallery", 1300);
         gallery.addArtwork(artwork);
 
-//        ArrayList<Artwork> artworksList = gallery.getArtworks();
-//
-//        for(Artwork artwork1 : artworksList){
-//            System.out.println(artwork1.getTitle());
-//        }
+        for(Artwork artwork1 : gallery.getArtworks()){
+            System.out.println("gallery collection: " + artwork1.getTitle());
+        }
 
         customer.subtractWallet(gallery, artwork);
         System.out.println("Wallet after purchasing: " + customer.getWallet());
+
+        for(Artwork artwork1 : customer.getPurchasedArtwork()){
+            System.out.println("customer collection: " + artwork1.getTitle());
+        }
     }
 }
