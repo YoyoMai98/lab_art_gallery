@@ -26,9 +26,13 @@ public class Gallery {
                 till += customer.getWallet();
                 customer.subtractWallet(artwork.getPrice());
                 customer.addPurchasedArtwork(artwork);
-                artworks.remove(artwork);
+//                artworks.remove(artwork);
             }
         }
+    }
+
+    public ArrayList getArtworks(){
+        return artworks;
     }
 
     public double getTill(){
