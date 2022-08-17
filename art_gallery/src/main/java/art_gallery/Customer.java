@@ -18,9 +18,12 @@ public class Customer {
         return wallet;
     }
 
-    public void subtractWallet(double payment){
+    public void subtractWallet(Gallery gallery, Artwork artwork){
+        double payment = artwork.getPrice();
         if(payment <= wallet){
             wallet -= payment;
+            gallery.sellArtwork(artwork);
+            addPurchasedArtwork(artwork);
         }else{
             System.out.println("Not enough money!");
         }
