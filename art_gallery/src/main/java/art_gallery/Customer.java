@@ -19,7 +19,11 @@ public class Customer {
     }
 
     public void subtractWallet(double payment){
-        wallet -= payment;
+        if(payment <= wallet){
+            wallet -= payment;
+        }else{
+            System.out.println("Not enough money!");
+        }
     }
 
     public void addPurchasedArtwork(Artwork artwork){
