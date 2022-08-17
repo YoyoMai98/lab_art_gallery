@@ -20,6 +20,7 @@ public class Gallery {
         for(Artwork artwork : artworks){
             if(customer.getWallet() > artwork.getPrice()){
                 till += customer.getWallet();
+                customer.subtractWallet(artwork.getPrice());
             }
         }
     }
