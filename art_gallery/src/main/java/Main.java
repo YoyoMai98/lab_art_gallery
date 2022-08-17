@@ -25,7 +25,6 @@ public class Main {
 //            System.out.println(artwork1.getTitle());
 //        }
 
-        gallery.sellArtwork(artwork);
         customer.subtractWallet(gallery, artwork);
         System.out.println("Wallet after purchasing: " + customer.getWallet());
     }
