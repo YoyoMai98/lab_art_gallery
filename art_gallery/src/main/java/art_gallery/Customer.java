@@ -33,7 +33,7 @@ public class Customer {
         purchasedArtworks.add(artwork);
     }
 
-    public ArrayList getPurchasedArtwork(){
+    public ArrayList<Artwork> getPurchasedArtwork(){
         return purchasedArtworks;
     }
 }
