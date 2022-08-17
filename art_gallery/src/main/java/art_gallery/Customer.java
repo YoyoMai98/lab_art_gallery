@@ -33,6 +33,7 @@ public class Customer {
         purchasedArtworks.add(artwork);
     }
 
+    // ext_1
     public ArrayList<Artwork> getPurchasedArtwork(){
         return purchasedArtworks;
     }

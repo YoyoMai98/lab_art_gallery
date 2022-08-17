@@ -23,6 +23,7 @@ public class Gallery {
         this.artworks.remove(artwork);
     }
 
+    //ext_1
     public ArrayList<Artwork> getArtworks(){
         return artworks;
     }
