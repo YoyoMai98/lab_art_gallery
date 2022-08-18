@@ -1,3 +1,4 @@
+import art_gallery.Artist;
 import art_gallery.Artwork;
 import art_gallery.Gallery;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,10 +12,13 @@ public class GalleryTest {
 
     private Gallery gallery;
     private Artwork artwork;
+    private Artist artist;
 
     @BeforeEach
     public void setUp(){
+        this.artist = new Artist("Vincent van Gogh");
         this.gallery = new Gallery("YK Gallery", 1300);
+        this.artwork = new Artwork("The Starry Night", artist, 2000, 150);
     }
 
     @Test
@@ -23,4 +27,13 @@ public class GalleryTest {
         double expected = 1300;
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    public void stockTake(){
+        gallery.addArtwork(artwork);
+        double actual = gallery.stockTake();
+        double expected = 2000;
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
