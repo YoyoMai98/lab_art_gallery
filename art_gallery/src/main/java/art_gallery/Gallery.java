@@ -25,7 +25,7 @@ public class Gallery {
     public void sellArtwork(Customer customer,Artwork artwork){
         if(customer.canBuyArtwork(artwork)){
             customer.subtractWallet(artwork);
-            setTill(artwork);
+            setTill(till += artwork.getPrice());
             removeArtwork(artwork);
         }
     }
