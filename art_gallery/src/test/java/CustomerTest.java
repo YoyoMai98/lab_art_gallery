@@ -47,6 +47,11 @@ public class CustomerTest {
     }
 
     @Test
+    public void ArtworkListCount__start(){
+        assertThat(customer.artworkListCount()).isEqualTo(0);
+    }
+
+    @Test
     public void canAddPurchasedArtwork(){
         customer.addPurchasedArtwork(starryNight);
         assertThat(customer.artworkListCount()).isEqualTo(1);
