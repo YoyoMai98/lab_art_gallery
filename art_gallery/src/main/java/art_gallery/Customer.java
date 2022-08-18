@@ -18,7 +18,7 @@ public class Customer {
         return wallet;
     }
 
-    public void subtractWallet(Artwork artwork){
+    public void buyArtwork(Artwork artwork){
         wallet -= artwork.getPrice();
         addPurchasedArtwork(artwork);
     }
