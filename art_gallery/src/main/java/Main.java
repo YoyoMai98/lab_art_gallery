@@ -26,7 +26,7 @@ public class Main {
         }
         System.out.println("Stock: " + gallery.stockTake());
 
-        customer.subtractWallet(gallery, artwork_1);
+        gallery.sellArtwork(customer,artwork_1);
         System.out.println("Wallet after purchasing: " + customer.getWallet());
 
         for(Artwork artwork1 : customer.getPurchasedArtwork()){
