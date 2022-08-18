@@ -27,6 +27,11 @@ public class GalleryTest {
     }
 
     @Test
+    public void canGetArtworkListsCount(){
+        assertThat(gallery.artworksListCount()).isEqualTo(0);
+    }
+
+    @Test
     public void canGetTill(){
         double actual = gallery.getTill();
         double expected = 1300;
