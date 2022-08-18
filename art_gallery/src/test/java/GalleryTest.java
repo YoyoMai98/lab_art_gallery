@@ -28,6 +28,7 @@ public class GalleryTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    // ext_2
     @Test
     public void stockTake(){
         gallery.addArtwork(artwork);

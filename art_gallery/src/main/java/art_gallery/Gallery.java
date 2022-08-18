@@ -39,7 +39,8 @@ public class Gallery {
     public void setTill(Artwork artwork){
         till += artwork.getPrice();
     }
-
+    
+    // ext_2
     public double stockTake (){
         double totalArtwork = 0;
         for (Artwork artwork : this.artworks){
