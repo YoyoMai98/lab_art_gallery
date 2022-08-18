@@ -50,4 +50,9 @@ public class GalleryTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    public void canSetTill(){
+        gallery.setTill(2000);
+        assertThat(gallery.getTill()).isEqualTo(2000);
+    }
 }
