@@ -22,6 +22,7 @@ public class Main {
         for(Artwork artwork1 : gallery.getArtworks()){
             System.out.println("gallery collection: " + artwork1.getTitle());
         }
+        System.out.println("Stock: " + gallery.stockTake());
 
         customer.subtractWallet(gallery, artwork);
         System.out.println("Wallet after purchasing: " + customer.getWallet());
@@ -29,5 +30,6 @@ public class Main {
         for(Artwork artwork1 : customer.getPurchasedArtwork()){
             System.out.println("customer collection: " + artwork1.getTitle());
         }
+        System.out.println("Stock: " + gallery.stockTake());
     }
 }
