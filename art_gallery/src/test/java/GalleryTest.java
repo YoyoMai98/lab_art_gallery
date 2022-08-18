@@ -13,6 +13,7 @@ public class GalleryTest {
 
     private Gallery gallery;
     private Artwork artwork;
+    private Artwork irises;
     private Artist artist;
     private Customer customer;
 
@@ -22,6 +23,7 @@ public class GalleryTest {
         this.gallery = new Gallery("YK Gallery", 1300);
         this.artwork = new Artwork("The Starry Night", artist, 2000, 150);
         this.customer = new Customer("Harry", 3000);
+        this.irises = new Artwork("Irises", artist, 1200, 230);
     }
 
     @Test
@@ -29,6 +31,18 @@ public class GalleryTest {
         double actual = gallery.getTill();
         double expected = 1300;
         assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void canAddArtwork(){
+        gallery.addArtwork(irises);
+        assertThat(gallery.artworksListCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void canRemoveArtwork(){
+        gallery.removeArtwork(irises);
+        assertThat(gallery.artworksListCount()).isEqualTo(0);
     }
 
     @Test
