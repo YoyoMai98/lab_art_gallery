@@ -33,7 +33,7 @@ public class GalleryTest {
 
     @Test void canSellArtwork(){
         gallery.addArtwork(artwork);
-        gallery.stockTake();
+        gallery.sellArtwork(customer,artwork);
         assertThat(gallery.getTill()).isEqualTo(3300);
         assertThat(customer.getWallet()).isEqualTo(1000);
     }
