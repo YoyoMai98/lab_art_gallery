@@ -37,6 +37,8 @@ public class GalleryTest {
         gallery.sellArtwork(customer,artwork);
         assertThat(gallery.getTill()).isEqualTo(3300);
         assertThat(customer.getWallet()).isEqualTo(1000);
+        assertThat(gallery.artworksListCount()).isEqualTo(0);
+        assertThat(customer.artworkListCount()).isEqualTo(1);
     }
 
     // ext_2
