@@ -31,7 +31,8 @@ public class GalleryTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    @Test void canSellArtwork(){
+    @Test
+    public void canSellArtwork(){
         gallery.addArtwork(artwork);
         gallery.sellArtwork(customer,artwork);
         assertThat(gallery.getTill()).isEqualTo(3300);

@@ -39,8 +39,8 @@ public class Gallery {
         return till;
     }
 
-    public void setTill(Artwork artwork){
-        till += artwork.getPrice();
+    public void setTill(double till){
+        this.till = till;
     }
 
     // ext_2
