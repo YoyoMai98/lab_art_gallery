@@ -21,17 +21,11 @@ public class Main {
         gallery.addArtwork(artwork_1);
         gallery.addArtwork(artwork_2);
 
-        for(Artwork artwork1 : gallery.getArtworks()){
-            System.out.println("gallery collection: " + artwork1.getTitle());
-        }
         System.out.println("Stock: " + gallery.stockTake());
 
         gallery.sellArtwork(customer,artwork_1);
         System.out.println("Wallet after purchasing: " + customer.getWallet());
 
-        for(Artwork artwork1 : customer.getPurchasedArtwork()){
-            System.out.println("customer collection: " + artwork1.getTitle());
-        }
         System.out.println("Stock: " + gallery.stockTake());
     }
 }

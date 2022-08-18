@@ -18,6 +18,7 @@ public class Gallery {
         this.artworks.add(artwork);
     }
 
+    // ext_1
     public void removeArtwork(Artwork artwork){
         this.artworks.remove(artwork);
     }
@@ -28,11 +29,6 @@ public class Gallery {
             setTill(till += artwork.getPrice());
             removeArtwork(artwork);
         }
-    }
-
-    //ext_1
-    public ArrayList<Artwork> getArtworks(){
-        return artworks;
     }
 
     public int artworksListCount(){

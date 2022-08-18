@@ -36,10 +36,6 @@ public class Customer {
         purchasedArtworks.add(artwork);
     }
 
-    public ArrayList<Artwork> getPurchasedArtwork(){
-        return purchasedArtworks;
-    }
-
     public int artworkListCount(){
         return purchasedArtworks.size();
     }
