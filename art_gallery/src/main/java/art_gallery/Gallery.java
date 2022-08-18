@@ -18,9 +18,13 @@ public class Gallery {
         this.artworks.add(artwork);
     }
 
+    public void removeArtwork(Artwork artwork){
+        this.artworks.remove(artwork);
+    }
+
     public void sellArtwork(Artwork artwork){
         setTill(artwork);
-        this.artworks.remove(artwork);
+        removeArtwork(artwork);
     }
 
     //ext_1
