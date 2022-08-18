@@ -19,7 +19,7 @@ public class Gallery {
     }
 
     public void sellArtwork(Artwork artwork){
-        till += artwork.getPrice();
+        setTill(artwork);
         this.artworks.remove(artwork);
     }
 
@@ -30,6 +30,10 @@ public class Gallery {
 
     public double getTill(){
         return till;
+    }
+
+    public void setTill(Artwork artwork){
+        till += artwork.getPrice();
     }
 
     public double stockTake (){
