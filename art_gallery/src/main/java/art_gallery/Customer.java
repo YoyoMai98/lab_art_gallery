@@ -18,14 +18,9 @@ public class Customer {
         return wallet;
     }
 
-    public void subtractWallet(Gallery gallery, Artwork artwork){
-        if(canBuyArtwork(artwork)){
-            wallet -= artwork.getPrice();
-            gallery.sellArtwork(artwork);
-            addPurchasedArtwork(artwork);
-        }else{
-            System.out.println("Not enough money!");
-        }
+    public void subtractWallet(Artwork artwork){
+        wallet -= artwork.getPrice();
+        addPurchasedArtwork(artwork);
     }
 
     public boolean canBuyArtwork(Artwork artwork){
