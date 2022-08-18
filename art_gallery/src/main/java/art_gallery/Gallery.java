@@ -22,9 +22,11 @@ public class Gallery {
         this.artworks.remove(artwork);
     }
 
-    public void sellArtwork(Artwork artwork){
-        setTill(artwork);
-        removeArtwork(artwork);
+    public void sellArtwork(Customer customer,Artwork artwork){
+        if(customer.canBuyArtwork(artwork)){
+            setTill(artwork);
+            removeArtwork(artwork);
+        }
     }
 
     //ext_1
@@ -39,7 +41,7 @@ public class Gallery {
     public void setTill(Artwork artwork){
         till += artwork.getPrice();
     }
-    
+
     // ext_2
     public double stockTake (){
         double totalArtwork = 0;
