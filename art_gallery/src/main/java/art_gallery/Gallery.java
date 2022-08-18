@@ -35,6 +35,10 @@ public class Gallery {
         return artworks;
     }
 
+    public int artworksListCount(){
+        return this.artworks.size();
+    }
+
     public double getTill(){
         return till;
     }
