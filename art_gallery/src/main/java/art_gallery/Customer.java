@@ -29,11 +29,19 @@ public class Customer {
         }
     }
 
+    public boolean canBuyArtwork(Artwork artwork){
+        if(wallet >= artwork.getPrice()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     // ext_1
     public void addPurchasedArtwork(Artwork artwork){
         purchasedArtworks.add(artwork);
     }
-    
+
     public ArrayList<Artwork> getPurchasedArtwork(){
         return purchasedArtworks;
     }
