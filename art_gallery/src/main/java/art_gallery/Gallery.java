@@ -32,4 +32,12 @@ public class Gallery {
         return till;
     }
 
+    public int stockTake (Artwork soldArtwork){
+        int totalArtwork = 0;
+        for (Artwork artwork : this.artworks){
+            totalArtwork += artwork.getPrice();
+        }
+        totalArtwork -= soldArtwork.getPrice();
+        return totalArtwork;
+    }
 }
