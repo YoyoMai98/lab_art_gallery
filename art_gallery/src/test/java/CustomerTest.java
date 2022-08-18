@@ -45,5 +45,11 @@ public class CustomerTest {
         boolean expected = false;
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    public void canAddPurchasedArtwork(){
+        customer.addPurchasedArtwork(starryNight);
+        assertThat(customer.artworkListCount()).isEqualTo(1);
+    }
     
 }
