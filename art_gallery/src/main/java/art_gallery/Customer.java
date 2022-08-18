@@ -19,9 +19,8 @@ public class Customer {
     }
 
     public void subtractWallet(Gallery gallery, Artwork artwork){
-        double payment = artwork.getPrice();
-        if(payment <= wallet){
-            wallet -= payment;
+        if(canBuyArtwork(artwork)){
+            wallet -= artwork.getPrice();
             gallery.sellArtwork(artwork);
             addPurchasedArtwork(artwork);
         }else{
