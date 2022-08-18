@@ -56,5 +56,11 @@ public class CustomerTest {
         customer.addPurchasedArtwork(starryNight);
         assertThat(customer.artworkListCount()).isEqualTo(1);
     }
-    
+
+    @Test
+    public void buyArtwork(){
+        customer.buyArtwork(irises);
+        assertThat(customer.getWallet()).isEqualTo(100);
+        assertThat(customer.artworkListCount()).isEqualTo(1);
+    }
 }
