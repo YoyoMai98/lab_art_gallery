@@ -1,11 +1,8 @@
 import art_gallery.Artist;
 import art_gallery.Artwork;
 import art_gallery.Customer;
-import art_gallery.Gallery;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
