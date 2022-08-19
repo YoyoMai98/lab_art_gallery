@@ -35,6 +35,14 @@ public class Gallery {
         return this.artworks.size();
     }
 
+    public ArrayList<Artwork> getArtworks(){
+        return this.artworks;
+    }
+
+    public void setArtworks(ArrayList<Artwork> artworks){
+        this.artworks = artworks;
+    }
+
     public double getTill(){
         return till;
     }
