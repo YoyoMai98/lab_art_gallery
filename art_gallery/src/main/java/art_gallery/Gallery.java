@@ -8,9 +8,9 @@ public class Gallery {
     private double till;
     private ArrayList<Artwork> artworks;
 
-    public Gallery(String name, double till){
+    public Gallery(String name){
         this.name = name;
-        this.till = till;
+        this.till = 0;
         this.artworks = new ArrayList<>();
     }
 

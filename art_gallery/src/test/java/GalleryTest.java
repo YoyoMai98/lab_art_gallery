@@ -18,7 +18,7 @@ public class GalleryTest {
     @BeforeEach
     public void setUp(){
         this.artist = new Artist("Vincent van Gogh");
-        this.gallery = new Gallery("YK Gallery", 1300);
+        this.gallery = new Gallery("YK Gallery");
         this.artwork = new Artwork("The Starry Night", artist, 2000, 150);
         this.customer = new Customer("Harry", 3000);
         this.irises = new Artwork("Irises", artist, 1200, 230);
@@ -32,7 +32,7 @@ public class GalleryTest {
     @Test
     public void canGetTill(){
         double actual = gallery.getTill();
-        double expected = 1300;
+        double expected = 0;
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -52,7 +52,7 @@ public class GalleryTest {
     public void canSellArtwork(){
         gallery.addArtwork(artwork);
         gallery.sellArtwork(customer,artwork);
-        assertThat(gallery.getTill()).isEqualTo(3300);
+        assertThat(gallery.getTill()).isEqualTo(2000);
         assertThat(customer.getWallet()).isEqualTo(1000);
         assertThat(gallery.artworksListCount()).isEqualTo(0);
         assertThat(customer.artworkListCount()).isEqualTo(1);
