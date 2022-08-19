@@ -29,4 +29,14 @@ public class ArtworkTest {
         String expected = "The Starry Night";
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    public void canGetNft(){
+        assertThat(artwork.getNft()).isEqualTo(150);
+    }
+
+    @Test
+    public void canGetArtist(){
+        assertThat(artwork.getArtist().getName()).isEqualTo("Vincent van Gogh");
+    }
 }
