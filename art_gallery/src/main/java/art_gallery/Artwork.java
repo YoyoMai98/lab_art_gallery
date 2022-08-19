@@ -22,4 +22,27 @@ public class Artwork {
         return title;
     }
 
+    public Artist getArtist() {
+        return artist;
+    }
+
+    public int getNft() {
+        return nft;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setNft(int nft) {
+        this.nft = nft;
+    }
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
+    }
 }
