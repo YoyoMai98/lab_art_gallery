@@ -47,4 +47,12 @@ public class Customer {
     public void setPurchasedArtworks(ArrayList<Artwork> purchasedArtworks){
         this.purchasedArtworks = purchasedArtworks;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
